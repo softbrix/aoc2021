@@ -37,7 +37,9 @@ function part1(mt) {
     }
     for (let x = 0; x < mt[0].length; ++x) {
       for (let y = 0; y < mt.length; ++y) {
-        r({x,y})
+        if (mt[p.x][p.y] > 9) {
+          mt[p.x][p.y] = 0;
+        }
       }
     }
     if (sum2 < 0 && flCount === 100) {
@@ -63,11 +65,5 @@ function t(p) {
     flashes.push(p);
     ++sum1;
     ++flCount;
-  }
-}
-
-function r(p) {
-  if (mt[p.x][p.y] > 9) {
-    mt[p.x][p.y] = 0;
   }
 }

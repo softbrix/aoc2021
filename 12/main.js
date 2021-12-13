@@ -3,16 +3,6 @@ const rl = readline.createInterface({
   input: process.stdin
 });
 
-const node = {
-  
-}
-
-function pt(a,b) {
-  if (!edges[a]) {
-    edges[a] = [];
-  }
-}
-
 var edges = {};
 rl.on('line', (line) => {
   const t = line.split('-');
